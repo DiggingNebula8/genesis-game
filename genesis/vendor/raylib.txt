@@ -1,0 +1,1 @@
+set up the cmake, so the compiled raylib folder comes here.
