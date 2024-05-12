@@ -1,1 +1,0 @@
-set up the cmake, so the compiled raylib folder(in raylib\out\build\x64-Debug) comes here.
