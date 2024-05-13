@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\UI\GameMenu.cpp" />
+    <ClCompile Include="src\UI\EditorMenu.cpp" />
     <ClCompile Include="src\Mechanics\FreeLookCamera.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="vendor\imgui\imgui.cpp" />
@@ -150,7 +150,7 @@
     <ClCompile Include="vendor\rlImgui\rlImGui.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\UI\GameMenu.h" />
+    <ClInclude Include="src\UI\EditorMenu.h" />
     <ClInclude Include="src\Mechanics\FreeLookCamera.h" />
     <ClInclude Include="vendor\imgui\imconfig.h" />
     <ClInclude Include="vendor\imgui\imgui.h" />

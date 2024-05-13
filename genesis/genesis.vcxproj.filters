@@ -39,7 +39,7 @@
     <ClCompile Include="vendor\imgui\imgui_widgets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\UI\GameMenu.cpp">
+    <ClCompile Include="src\UI\EditorMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,7 +74,7 @@
     <ClInclude Include="vendor\imgui\imstb_truetype.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\UI\GameMenu.h">
+    <ClInclude Include="src\UI\EditorMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

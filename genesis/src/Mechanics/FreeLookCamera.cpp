@@ -20,7 +20,10 @@ void FreeLookCamera::Initialize() {
 }
 
 void FreeLookCamera::Update() {
-    UpdateCamera(&camera, CAMERA_FREE); // Pass the mode to the camera update function
+    if (IsMouseButtonDown(MOUSE_BUTTON_RIGHT))
+    {
+        UpdateCamera(&camera, CAMERA_FREE); // Pass the mode to the camera update function
+    }
 
     if (IsKeyPressed('Z')) {
         camera.target = { 0.0f, 0.0f, 0.0f }; // Reset target to the origin
