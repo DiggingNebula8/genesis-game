@@ -1,3 +1,9 @@
 [submodule "raylib"]
 	path = genesis/vendor/raylib
 	url = git@github.com:DiggingNebula8/raylib.git
+[submodule "genesis/vendor/imgui"]
+	path = genesis/vendor/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "genesis/vendor/rlImgui"]
+	path = genesis/vendor/rlImgui
+	url = https://github.com/raylib-extras/rlImGui.git
