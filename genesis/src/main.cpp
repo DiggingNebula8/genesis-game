@@ -1,39 +1,48 @@
+// Raylib
 #include "raylib.h"
+#include "raymath.h"
 
 // Imgui
 #include "imgui.h"
-#include "rlImGui.h" // Raylib bindings for Imgui
+#include "rlImGui.h"
+#include "rlImGuiColors.h"
 
 // Genesis stuff
 #include "Mechanics/FreeLookCamera.h"
+#include "UI/GameMenu.h"
 
 int main() {
+
+	// Initialization
+//--------------------------------------------------------------------------------------
     const int screenWidth = 1920;
     const int screenHeight = 1080;
+	SetConfigFlags(FLAG_MSAA_4X_HINT | FLAG_VSYNC_HINT);
     InitWindow(screenWidth, screenHeight, "Free Look Camera");
-
     SetTargetFPS(60);
 
-    // Camera Stuff, abstracted to it's own class
     FreeLookCamera camera;
     Vector3 cubePosition = { 0.0f, 1.0f, 0.0f };
+    GameMenu gameMenu;
 
     // Imgui Setup for raylib
     rlImGuiSetup(true);
+	ImGui::GetIO().ConfigWindowsMoveFromTitleBarOnly = true;
+    ImGui::GetIO().FontGlobalScale = 1.5;
 
     while (!WindowShouldClose()) {
-        // Updates camera each frame
         camera.Update();
 
         // Draws the thing every frame
         BeginDrawing();
-        rlImGuiBegin(); // UI Draw Begin
         ClearBackground(GRAY);
+        rlImGuiBegin(); // UI Draw Begin
+
+        gameMenu.Update();
+        gameMenu.DemoWindow();
+
         camera.BeginMode();
 
-        // show ImGui Content
-        bool open = true; // is UI check  
-        ImGui::ShowDemoWindow(&open); // draws demo UI
 
         // Draws the geometry, should be abstracted to it's own funtionality.
         DrawCube(cubePosition, 2.0f, 2.0f, 2.0f, BLACK);
@@ -50,6 +59,7 @@ int main() {
         EndDrawing();
     }
     rlImGuiShutdown(); // Clears UI Resources
+
     CloseWindow();
     return 0;
 }
