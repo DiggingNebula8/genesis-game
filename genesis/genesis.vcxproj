@@ -150,6 +150,7 @@
     <ClCompile Include="vendor\rlImgui\rlImGui.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Shaders\Lights.h" />
     <ClInclude Include="src\UI\EditorMenu.h" />
     <ClInclude Include="src\Mechanics\FreeLookCamera.h" />
     <ClInclude Include="vendor\imgui\imconfig.h" />
@@ -161,6 +162,10 @@
     <ClInclude Include="vendor\rlImgui\imgui_impl_raylib.h" />
     <ClInclude Include="vendor\rlImgui\rlImGui.h" />
     <ClInclude Include="vendor\rlImgui\rlImGuiColors.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Shaders\Resources\glsl330\lighting\lighting.fs" />
+    <None Include="src\Shaders\Resources\glsl330\lighting\lighting.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

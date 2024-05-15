@@ -77,5 +77,12 @@
     <ClInclude Include="src\UI\EditorMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Shaders\Lights.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Shaders\Resources\glsl330\lighting\lighting.fs" />
+    <None Include="src\Shaders\Resources\glsl330\lighting\lighting.vs" />
   </ItemGroup>
 </Project>
